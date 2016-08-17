@@ -1,0 +1,152 @@
+.header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    background: #FFF;
+    box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.3)
+}
+.nav {
+    max-width: 1170px;
+    height: 100%;
+    padding: 20px 15px;
+    margin: 0 auto;
+}
+.nav img {
+    display: block;
+    width: 40px;
+    height: 30px;
+    float: left;
+}
+.nav ul {
+    margin: 0;
+    padding-left: 70px;
+    /*display: none; */
+}
+.nav ul li {
+    display: inline-block;
+    padding: 0 10px 0 0;
+}
+.nav ul li a {
+    color:#464646;
+    transition: inherit !important;
+    /*text-transform: uppercase;*/
+    letter-spacing:-1px;
+}
+
+.nav ul li:hover a {
+    color: #000;
+    text-decoration: none;
+}
+.nav ul li a:focus {
+    text-decoration: none;
+    /*color: rgb(29, 119, 8);*/
+}
+.nav ul li {
+    display: inline-block;
+    padding: 0 10px 0 0;
+}
+#portfoliolist .modalWrap {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.6) !important;
+    z-index: 999;
+}
+
+/*start modalPopup css*/
+
+.modalWrap .content {
+    position: absolute;
+    width: 100%;
+    padding-top: 30px;
+}
+.portfolio-wrapper .pointInfoWrap {
+    position: absolute;
+    top: 5px;
+    right: 5px
+}
+.pointInfoWrap .btn_Responsive {
+    color: #FFF;
+    display: inline-block;
+    background: #337ab7;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 15px;
+    font-family: 'nanum gothic';
+    width: 50px;
+    height: 33px;
+    line-height: 25px;
+    vertical-align: middle;
+    text-align: center;
+}
+.pointInfoWrap .btn_team {
+    color: #FFF;
+    display: inline-block;
+    background: #a7cdcc;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 15px;
+    width: 50px;
+    height: 33px;
+    text-align: center;
+    line-height: 27px;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+.icon-cancel-circle {
+    font-size:50px;
+    outline: none;
+    background: none;
+    border: none;
+    color:#464646
+}
+.modalWrap .content a,
+.modalWrap .content strong,
+.modalWrap .content span,
+.modalWrap .content p,
+.modalWrap .content h3{
+  color:#464646;
+  margin: 10px 0 0 0;
+  font-family: 'roboto',"nanum gothic";
+
+}
+.modalWrap .content img {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    left: 0;
+    width: 70%;
+    margin: 0 auto;
+    transform: inherit;
+}
+@media screen and (max-width: 1200px) {
+    .nav {
+        max-width: 970px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .nav {
+        max-width: 750px;
+    }
+    .nav ul {
+        padding-left: 60px;
+    }
+    .nav ul li a {
+        font-size: 16px;
+    }
+
+    .modalWrap .content {
+        padding-top: 10px;
+    }
+    .modalWrap .content img {
+        top: 50px;
+        width: 100%;
+    }
+    .modalWrap .content .infowrap h3 {
+        margin: 0;
+    }
+}
