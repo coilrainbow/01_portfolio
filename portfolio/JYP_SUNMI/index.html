@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>:: SUNMI ::</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="lib/font/flaticon.css" type="text/css" />
+    <link rel="stylesheet" href="lib/css/common.css" type="text/css" />
+    <link rel="stylesheet" href="lib/css/mainPage.css" type="text/css" />
+    <link rel="stylesheet" href="lib/css/gnb.css" type="text/css" />
+    <link rel="stylesheet" href="lib/css/footer.css" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--<script src="../lib/js/gnb.js"></script>-->
+    <script>
+        $(function() {
+
+
+            // start fadein
+            $('body').css({
+                    display: 'none'
+                }).fadeIn(1000)
+                // end fadein
+
+            // start nav click event
+            $('.nav > a').click(function() {
+                $('.nav ul').toggle();
+                $('.changeText').text(function(i, v) {
+                    return v === 'Main Menu' ? 'Close Menu' : 'Main Menu'
+                        // v가 MM이라는 조건이? true면 CM false면 MM
+                });
+            });
+            // start nav click event
+
+
+
+
+
+
+
+            // if($('body').width() >= 768){
+            //     $('.nav').off("click");
+            //     // $('.nav .gnbList').css({display:'block',zIndex:999});
+            //     // $('.nav .openMenu').css({display:'none'});
+            //     // $('.nav .closeMenu').css({display:'none'});
+            // }else if($('body').width() < 767){
+            //     $('.nav >a:first').css({display:'block'});
+            //     $('.nav .closeMenu').css({display:'none'});
+            //     // $('.nav .gnbList').css({display:'none'});
+            //
+            // }
+
+
+        })
+    </script>
+
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <div class="header">
+            <div class="mark">
+                <a href="index.html"></a>
+            </div>
+            <div class="nav">
+                <a href="javascript:void(0)" class="changeText">Main Menu</a>
+                <ul class="gnbList">
+                    <li><a href="html/00_profile/00_profile.html">PROFILE</a></li>
+                    <li><a href="html/01_discography/01_discography.html">DISCOGRAPHY</a></li>
+                    <li><a href="">GALLERY</a></li>
+                    <li><a href="">VIDEO</a></li>
+                    <li><a href="">NOTICE</a></li>
+                    <li><a href="">SCHEDULE</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="logo"></div>
+
+        <div class="footer">
+            <div class="jyp_logo"><a href="">jyp</a></div>
+            <ul class="sns">
+                <li>
+                    <a href="" class="flaticon-youtube-logo"></a>
+                </li>
+                <li>
+                    <a href="" class="flaticon-facebook-app-symbol"></a>
+                </li>
+                <li>
+                    <a href="" class="flaticon-twitter"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
