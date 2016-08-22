@@ -51,7 +51,7 @@ p {
     margin-bottom: 1.7em;
 }
 .spacer {
-    padding: 6em 0;
+    padding: 13em 0;
 }
 .btn {
     border: none;
@@ -127,14 +127,15 @@ p {
 }
 #about .row .titleWrap {
     margin-left: 8px;
-    letter-spacing:-1px;
+    letter-spacing: -1px;
 }
-#about .row .int_Wrap  p{
+#about .row .int_Wrap p {
     /*letter-spacing:-1px;*/
-    margin-bottom:0;
+    margin-bottom: 0;
 }
-#about .row .titleWrap i{
+#about .row .titleWrap i {
     font-size: 50px;
+    color: #535353;
 }
 #about .row h4 {
     margin: 3px 0 20px;
@@ -148,19 +149,21 @@ p {
 #about h3 {
     border: 1px solid #ccc;
     border-radius: 3px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.85);
     line-height: 2em;
     width: 40%;
-    margin: 10px auto 20px;
+    margin: 1.5em auto 1.5em;
 }
 #about .int_Wrap {
     border: 1px solid;
     border-radius: 3px;
-    padding: 15px;
+    padding: 20px 30px 30px;
     margin: 0 0 15px;
     background: rgba(255, 255, 255, 0.8);
 }
-
+#about .mg3em {
+    margin-top: 1em;
+}
 .about.spacer {
     padding-left: 4em;
     padding-right: 4em;
@@ -181,6 +184,7 @@ p {
     line-height: 2em;
     display: inline-block;
     font-weight: 300;
+    color: #535353;
 }
 .services ul li span i {
     font-size: 3em;
@@ -238,6 +242,9 @@ p {
 }
 #filters li span:hover, #filters li span:focus, #filters li span.active {
     color: #000 !important;
+}
+#works ul {
+    padding: 0
 }
 #works {
     padding-top: 6em;
@@ -314,7 +321,7 @@ p {
     color: #fff;
     font-size: 3em;
     color: #FFF;
-    padding: 1em 0 2em;
+    padding: 1.4em 0 2em;
     font-weight: bold;
 }
 .footer p.flipInX {
@@ -402,7 +409,7 @@ p {
         line-height: 1.5em;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     body {
         font: 300 12px/12px Roboto, Arial, Helvetica;
         /*background-size:68%;*/
@@ -458,8 +465,7 @@ p {
     #about .row div {
         float: left !important;
         clear: left;
-        width: 49%;
-        margin-left: 1%;
+        width: 50;
     }
     #about .row .titleWrap {
         width: 30%;
@@ -468,7 +474,7 @@ p {
         width: 70%;
         float: right;
     }
-    #about .row .titleWrap i{
+    #about .row .titleWrap i {
         font-size: 35px;
     }
     #about .row div:first-child {
@@ -482,7 +488,7 @@ p {
         padding-right: 2em;
     }
     .spacer {
-        padding: 2em 0 0 0;
+        padding: 1.3em 0 0 0;
     }
     .services ul li {
         margin-bottom: 1em;
@@ -520,5 +526,14 @@ p {
     }
     #about .row div {
         width: 100%;
+    }
+    .grid figure p {
+        margin-top: 4%;
+    }
+    #works figcaption a {
+        margin-top: 3%;
+    }
+    figure.effect-oscar h2 {
+        margin-top: -5%;
     }
 }

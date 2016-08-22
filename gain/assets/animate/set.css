@@ -62,9 +62,8 @@
     margin: 0;
 }
 .grid figure p {
-    letter-spacing: 1px;
-    font-size: 80%;
-    margin-top:10%;
+    letter-spacing: -0.5px;
+    margin-top:5%;
 }
 
 /* Individual effects */
