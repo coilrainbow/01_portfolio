@@ -1,0 +1,30 @@
+.header{
+  position:fixed;
+  padding: 20px 0 20px;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0px 2px 2px 0 rgba(0,0,0,0.3)
+
+}
+.nav{
+  width:970px;
+  height:100%;
+  margin:0 auto;
+    
+}
+
+.nav img{
+  display:block;
+  width:40px;
+  height:30px;
+}
+
+.nav ul{
+  margin: 0;
+  padding: 10px 0 0;
+  /* display: none; */ 
+  
+}
+.nav ul li{ 
+    display:inline-block;
+}
