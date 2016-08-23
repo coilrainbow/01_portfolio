@@ -1,12 +1,22 @@
 // A hover menu start
 
-$(function(){
-    $('nav a').hover(function(){
-        $(this).css({color:'#FFF'}).stop().animate({left:'10px'},200).parent().css({
-            background:'#000'
+$(function() {
+    $('nav a').hover(function() {
+        $(this).css({
+            color: '#FFF'
+        }).stop().animate({
+            left: '10px'
+        }, 200).parent().css({
+            background: '#000'
         })
-    },function(){
-            $(this).parent().css({background:'#CCC'}).children('a').css({color:'#000'}).stop().animate({left:'0'},200)
+    }, function() {
+        $(this).parent().css({
+            background: '#CCC'
+        }).children('a').css({
+            color: '#000'
+        }).stop().animate({
+            left: '0'
+        }, 200)
     })
 })
 
@@ -17,17 +27,16 @@ $(function(){
 
 // B scrollmove menu start
 var spot = [];
-$(window).load(function(){
-    $('.content section').each(function(){
+$(window).load(function() {
+    $('.content section').each(function() {
         spot.push($(this).offset().top)
     })
-    // console.log(spot)
-    $('nav a').click(function(){
+    $('nav a').click(function() {
 
         var idx = $(this).parent().index();
-        // console.log(idx)
+
         $('html,body').animate({
-            scrollTop:spot[idx]
+            scrollTop: spot[idx]
         })
         return false
     })
@@ -39,100 +48,98 @@ $(window).load(function(){
 
 // C slidebanner start
 
-$(function(){
+$(function() {
 
-    idx = Math.floor(Math.random()*$('.slidebanner li').size())
+    idx = Math.floor(Math.random() * $('.slidebanner li').size())
     $('.slidebanner li').eq(idx).addClass('on').children('img').css({
-        display:'block'
+        display: 'block'
     })
     var silidewidth = $('.slidebanner').width()
 
-    // console.log(idx)
-    $('.next').click(function(){
+    $('.next').click(function() {
         $('.slidebanner li').eq(idx).removeClass('on').children('img').stop().animate({
-            left:-silidewidth
+            left: -silidewidth
         }).parent().next().addClass('on').children('img').css({
-            display:'block',
-            left:silidewidth
+            display: 'block',
+            left: silidewidth
         }).stop().animate({
-            left:0
+            left: 0
         })
 
         idx++
-        // console.log(idx)
 
-        if(idx == $('.slidebanner li').length){
-            idx= 0
+
+        if (idx == $('.slidebanner li').length) {
+            idx = 0
             $('.slidebanner li').eq(idx).addClass('on').children('img').css({
-                display:'block',
-                left:silidewidth
+                display: 'block',
+                left: silidewidth
             }).stop().animate({
-                left:0
+                left: 0
             })
         }
 
     })
 
-    $('.prev').click(function(){
+    $('.prev').click(function() {
         $('.slidebanner li').eq(idx).removeClass('on').children('img').stop().animate({
-            left:silidewidth
+            left: silidewidth
         }).parent().prev().addClass('on').children('img').css({
-            display:'block',
-            left:-silidewidth
+            display: 'block',
+            left: -silidewidth
         }).animate({
-            left:0
+            left: 0
         })
         idx--
 
-        if(idx < 0){
-            idx = $('.slidebanner li').size()-1
+        if (idx < 0) {
+            idx = $('.slidebanner li').size() - 1
             $('.slidebanner li').eq(idx).addClass('on').children('img').css({
-                display:'block',
-                left:-silidewidth
+                display: 'block',
+                left: -silidewidth
             }).animate({
-                left:0
+                left: 0
             })
         }
     })
 
 
-    var loof =setInterval(function(){
+    var loof = setInterval(function() {
         $('.next').click()
-    },4500)
+    }, 4500)
 
-    $('.slidebanner').mouseenter(function(){
+    $('.slidebanner').mouseenter(function() {
         clearInterval(loof)
-    }).mouseleave(function(){
-        loof =setInterval(function(){
+    }).mouseleave(function() {
+        loof = setInterval(function() {
             $('.next').click()
-        },4500)
+        }, 4500)
     })
 
-    $('.slidebanner li a').click(function(){
-        idx =$(this).parent().index()
-        var his =$('.slidebanner li.on').index()
-        // console.log(idx)
-        // console.log(his)
+    $('.slidebanner li a').click(function() {
+        idx = $(this).parent().index()
+        var his = $('.slidebanner li.on').index()
 
-        if(idx > his){
+
+        if (idx > his) {
             $('.slidebanner li.on').removeClass('on').children('img').animate({
-                left:-silidewidth
+                left: -silidewidth
             })
             $('.slidebanner li').eq(idx).addClass('on').children('img').css({
-                display:'block',
-                left:silidewidth
+                display: 'block',
+                left: silidewidth
             }).stop().animate({
-                left:0
+                left: 0
             })
-        }else if (idx < his){
+        } else if (idx < his) {
             $('.slidebanner li.on').removeClass('on').children('img').animate({
-                left:silidewidth
+                left: silidewidth
             })
             $('.slidebanner li').eq(idx).addClass('on').children('img').css({
-                display:'block',
-                left:-silidewidth
+                display: 'block',
+                left: -silidewidth
             }).stop().animate({
-                left:0
+                left: 0
             })
         }
 
@@ -150,51 +157,51 @@ $(function(){
 
 // D fadebanner start
 
-$(function(){
+$(function() {
 
     fadeIdx = 0
     fadebannerWidth = $('.fadebanner').width()
     $('.fadebanner li').eq(fadeIdx).addClass('on')
 
-    var fadeLoof = setInterval(function(){
+    var fadeLoof = setInterval(function() {
         $('.fadebanner li').eq(fadeIdx).removeClass('on').children('img')
-        .fadeOut(1300)
-        .parent().next().addClass('on').children('img').fadeIn(1300)
-
-        fadeIdx++
-
-        if(fadeIdx == $('.fadebanner li').size()){
-            fadeIdx = 0
-            $('.fadebanner li').eq(fadeIdx).addClass('on').children('img')
-            .fadeIn(1300)
-        }
-    },4800)
-
-    $('.fadebanner').mouseenter(function(){
-        clearInterval(fadeLoof)
-    }).mouseleave(function(){
-        fadeLoof = setInterval(function(){
-            $('.fadebanner li').eq(fadeIdx).removeClass('on').children('img')
             .fadeOut(1300)
             .parent().next().addClass('on').children('img').fadeIn(1300)
 
+        fadeIdx++
+
+        if (fadeIdx == $('.fadebanner li').size()) {
+            fadeIdx = 0
+            $('.fadebanner li').eq(fadeIdx).addClass('on').children('img')
+                .fadeIn(1300)
+        }
+    }, 4800)
+
+    $('.fadebanner').mouseenter(function() {
+        clearInterval(fadeLoof)
+    }).mouseleave(function() {
+        fadeLoof = setInterval(function() {
+            $('.fadebanner li').eq(fadeIdx).removeClass('on').children('img')
+                .fadeOut(1300)
+                .parent().next().addClass('on').children('img').fadeIn(1300)
+
             fadeIdx++
 
-            if(fadeIdx == $('.fadebanner li').size()){
+            if (fadeIdx == $('.fadebanner li').size()) {
                 fadeIdx = 0
                 $('.fadebanner li').eq(fadeIdx).addClass('on').children('img')
-                .fadeIn(1300)
+                    .fadeIn(1300)
             }
-        },4800)
+        }, 4800)
     })
-    
-    $('.fadebanner ul li a').click(function(){
+
+    $('.fadebanner ul li a').click(function() {
         var idx = $(this).parent().index()
-        
-        
+
+
         $('.fadebanner ul li.on').removeClass('on').children('img').fadeOut(1300)
         $('.fadebanner ul li').eq(idx).addClass('on').children('img').fadeIn(1300)
-        
+
     })
 
 
@@ -208,22 +215,22 @@ $(function(){
 
 // E sns move list gellay start
 
-$(function(){
+$(function() {
     var snsIdx = 0
     $('.movie-view ul li').eq(snsIdx).addClass('on')
-    
-    
-    $('.movie-view ul li a').click(function(){
 
-        var url =$(this).attr('href');
-        var location = 'https://www.youtube.com/embed/'+url+'?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen'
-        $('.view iframe').attr('src',location);
-        
+
+    $('.movie-view ul li a').click(function() {
+
+        var url = $(this).attr('href');
+        var location = 'https://www.youtube.com/embed/' + url + '?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen'
+        $('.view iframe').attr('src', location);
+
         $(this).parent().addClass('on').siblings().removeClass('on')
 
         return false
     })
-    
+
 })
 
 // E sns move list gellay  end
@@ -232,12 +239,12 @@ $(function(){
 
 // F wing banner start
 
-    $(window).scroll(function(){
-        var sct = $(this).scrollTop()
-        $('.wing').stop().animate({
-            top:sct
-        },600)
-    })
+$(window).scroll(function() {
+    var sct = $(this).scrollTop()
+    $('.wing').stop().animate({
+        top: sct
+    }, 600)
+})
 
 // F wing banner end
 
@@ -245,32 +252,32 @@ $(function(){
 
 // G layout popup start
 
- $(function(){
+$(function() {
 
-    $('.btngroup button').click(function(){
+    $('.btngroup button').click(function() {
         var idx = $(this).index()
-        
+
         var bl_Tag = "";
         bl_Tag += '<div class="blind">';
         bl_Tag += '</div>';
         $('body').append(bl_Tag);
-        $('.blind').fadeTo(1000,0.5);
+        $('.blind').fadeTo(1000, 0.5);
         $('.popup').css({
-            top:'25%',
-            left:'50%',
-            marginLeft:-($('.popup li').eq(idx).width()/2),
+            top: '25%',
+            left: '50%',
+            marginLeft: -($('.popup li').eq(idx).width() / 2),
         })
         $('.popup li').append('<button class="closeBtn">닫기</button>')
 
         $('.popup li').eq(idx).slideDown(1000)
-        
-        $('.closeBtn').click(function(){
+
+        $('.closeBtn').click(function() {
             $('.popup li').eq(idx).slideUp(1000);
-            $('.blind').fadeOut(1000,function(){
+            $('.blind').fadeOut(1000, function() {
                 $(this).remove()
             })
-        })    
+        })
     })
- })
+})
 
 // G layout popup end
