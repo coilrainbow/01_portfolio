@@ -1,0 +1,121 @@
+body {
+    /*padding:20px; */
+    background-color: #fafafa;
+}
+ul {
+    list-style: none;
+}
+.navbar {
+    border: none;
+    padding: 20px 0;
+}
+.navbar-brand {
+    margin-top: 5px;
+    background-image: url(../images/header_wordLogo.png);
+    background-size: 146px 65px;
+    width: 146px;
+    height: 37px;
+}
+.logo_blossom {
+    background-image:url(../images/header_logo.png);
+    width: 50px 122px;
+    padding: 20px 0;
+
+
+}
+main .song {
+    background-image: url(http://blossomenter.com/actors/song_joongki/wp-content/themes/star/images/bio_bg.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    margin-top: -320px;
+    left: 50%;
+    margin-left: -390px;
+    height: 740px;
+    width: 780px;
+    overflow: hidden;
+    z-index: -1;
+}
+.title {
+    margin-top: 40px;
+    font-size: 2em;
+    color: #666;
+    letter-spacing: -0.9px;
+}
+.subtitle {
+    display: block;
+    width: 100%;
+    border-top: 3px gray solid;
+    display: inline-block;
+    margin-top: 15px;
+    padding-top: 15px;
+    font-size: 1.2em;
+    letter-spacing: -0.9px;
+    font-weight: bold;
+    color: #666;
+}
+.information {
+    margin-top: 60px;
+}
+.information strong {
+    font-size: 2em;
+    color: #999;
+    letter-spacing: -1.5px;
+}
+.information span {
+    margin-left: 10px;
+    letter-spacing: -1px;
+    font-weight: normal;
+}
+.information dl {
+    margin-top: 10px;
+}
+.information dt {
+    float: left;
+    margin-right: 10px;
+    color: #999;
+    letter-spacing: -1px;
+}
+.information dt, .information dd {
+    line-height: 240%;
+    font-size: 12px;
+}
+.information dd {
+    color: #666;
+    font-weight: 600;
+}
+.footer address {
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    right: 3%;
+    margin: 0 auto;
+    border-top: 2px #666 solid;
+    text-align: center;
+    max-width: 1140px;
+    height: 80px;
+    padding-top: 10px;
+    background-color: #fafafa;
+}
+.footer address span {
+    display: block;
+    font-size: 11px;
+    color: #666;
+}
+@media(max-width:767px) {
+    main .song {
+        display: none;
+    }
+    .title {
+        display: none;
+    }
+    .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0%;
+        right: 0%;
+    }
+    .footer .pull-right {
+        display: none;
+    }
+}
