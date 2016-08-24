@@ -1,61 +1,81 @@
 body {
-    /*padding:20px; */
+    padding: 10px;
     background-color: #fafafa;
+    font-family: 'Ubuntu', sans-serif;
 }
 ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.wrapper {
+    max-width: 780px;
+}
+header {
+    background: #fafafa;
+    margin-top: 30px;
+    position: relative;
+    z-index: 10
 }
 .navbar {
     border: none;
-    padding: 20px 0;
+    padding: 20px 0 15px;
+    background: url(../images/header_logo.png) no-repeat 160px -73px;
+    background-size: 60px 150px;
+    margin-bottom: 0;
 }
 .navbar-brand {
-    margin-top: 5px;
-    background-image: url(../images/header_wordLogo.png);
+    margin-top: 12px;
+    background: url(../images/header_wordLogo.png);
     background-size: 146px 65px;
     width: 146px;
     height: 37px;
 }
-.logo_blossom {
-    background-image:url(../images/header_logo.png);
-    width: 50px 122px;
-    padding: 20px 0;
-
-
+.nav {
+    letter-spacing: 0.3px;
+    font-weight: bold;
 }
-main .song {
-    background-image: url(http://blossomenter.com/actors/song_joongki/wp-content/themes/star/images/bio_bg.jpg);
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 50%;
-    margin-top: -320px;
-    left: 50%;
-    margin-left: -390px;
+.nav li a {
+    padding: 15px 0 20px;
+    margin-left: 10px;
+    letter-spacing: -0.6px;
+    line-height: 30px;
+}
+.nav li:first-child a {
+    margin-left: 0;
+}
+.nav li>ul {
+    display: none;
+}
+.song {
+    background: url(../images/bg_song.jpg) no-repeat top 170px center;
     height: 740px;
-    width: 780px;
-    overflow: hidden;
-    z-index: -1;
+    width: 100%;
 }
-.title {
-    margin-top: 40px;
-    font-size: 2em;
-    color: #666;
-    letter-spacing: -0.9px;
+.title h3 {
+    font-size: 30px;
+    color: #999;
+    letter-spacing: -1px;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+}
+.title .text-right {
+    margin-top: 0;
 }
 .subtitle {
     display: block;
     width: 100%;
-    border-top: 3px gray solid;
     display: inline-block;
-    margin-top: 15px;
     padding-top: 15px;
     font-size: 1.2em;
     letter-spacing: -0.9px;
     font-weight: bold;
     color: #666;
+    border-top: 4px #666 solid;
 }
 .information {
-    margin-top: 60px;
+    margin-top: 40px;
+    font-family: sans-serif;
 }
 .information strong {
     font-size: 2em;
@@ -77,22 +97,19 @@ main .song {
     letter-spacing: -1px;
 }
 .information dt, .information dd {
-    line-height: 240%;
+    line-height: 1.8em;
     font-size: 12px;
+    margin-bottom: 5px;
 }
 .information dd {
     color: #666;
     font-weight: 600;
 }
 .footer address {
-    position: absolute;
-    bottom: 0;
-    left: 3%;
-    right: 3%;
     margin: 0 auto;
-    border-top: 2px #666 solid;
+    border-top: 1px #999 solid;
     text-align: center;
-    max-width: 1140px;
+    max-width: 780px;
     height: 80px;
     padding-top: 10px;
     background-color: #fafafa;
@@ -103,19 +120,83 @@ main .song {
     color: #666;
 }
 @media(max-width:767px) {
-    main .song {
+    header {
+        margin: 0;
+    }
+    .navbar {
+        border: none;
+        padding: 0;
+        background: url(../images/header_logo.png) no-repeat 107px -77px;
+        background-size: 50px 122px;
+        margin-bottom: 0;
+    }
+    .navbar-brand {
+        width: 100px;
+        height: 25px;
+        background: url(../images/header_wordLogo.png) no-repeat 0 -40px;
+        background-size: 146px 65px;
+    }
+    .collspan.navbar-collapse {
         display: none;
+    }
+    .nav {
+        height: 300px;
+        margin: 0;
+        padding-top: 50px;
+    }
+    .collspan.navbar-collapse li.on a {
+        color: #6789a9 !important;
+    }
+    .nav li a {
+        margin-left: 0;
+        padding: 5px 0;
+    }
+    .nav li ul {
+        display: block;
+        font-size: 0;
+    }
+    .nav> li:nth-child(3) {
+        padding: 0 0 10px 0;
+    }
+    .nav> li:nth-child(3)>a {
+        padding: 0;
+        line-height: 10px;
+        margin: 15px 0 10px;
+    }
+    .nav li> ul li {
+        display: inline-block;
+    }
+    .nav li> ul li a {
+        font-size: 11px;
+        line-height: 12px;
+        color: #777;
+        padding: 0;
+        margin-left: 10px;
+    }
+    .nav li> ul li:first-child {
+        margin-left: 0;
+    }
+    /*.nav li> ul li a:focus,*/
+    /*.nav li ul li a:hover {
+        color: #6789a9;
+        text-decoration: none;
+    }*/
+    .wrapper .container {
+        padding: 0 10px;
+    }
+    .song {
+        background: none;
+        height: 100%;
+        padding: 0 0 100px;
     }
     .title {
         display: none;
     }
-    .footer {
-        position: absolute;
-        bottom: 0;
-        left: 0%;
-        right: 0%;
+    .footer .pull-left {
+        display: none;
     }
     .footer .pull-right {
-        display: none;
+        float: left !important;
+        text-align: left;
     }
 }

@@ -14,46 +14,14 @@
     <link rel="stylesheet" href="lib/css/footer.css" type="text/css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!--<script src="../lib/js/gnb.js"></script>-->
+    <script src="lib/js/gnb.js"></script>
     <script>
         $(function() {
-
-
             // start fadein
             $('body').css({
                     display: 'none'
                 }).fadeIn(1000)
                 // end fadein
-
-            // start nav click event
-            $('.nav > a').click(function() {
-                $('.nav ul').toggle();
-                $('.changeText').text(function(i, v) {
-                    return v === 'Main Menu' ? 'Close Menu' : 'Main Menu'
-                        // v가 MM이라는 조건이? true면 CM false면 MM
-                });
-            });
-            // start nav click event
-
-
-
-
-
-
-
-            // if($('body').width() >= 768){
-            //     $('.nav').off("click");
-            //     // $('.nav .gnbList').css({display:'block',zIndex:999});
-            //     // $('.nav .openMenu').css({display:'none'});
-            //     // $('.nav .closeMenu').css({display:'none'});
-            // }else if($('body').width() < 767){
-            //     $('.nav >a:first').css({display:'block'});
-            //     $('.nav .closeMenu').css({display:'none'});
-            //     // $('.nav .gnbList').css({display:'none'});
-            //
-            // }
-
-
         })
     </script>
 
@@ -68,14 +36,14 @@
                 <a href="index.html"></a>
             </div>
             <div class="nav">
-                <a href="javascript:void(0)" class="changeText">Main Menu</a>
+                <a href="javascript:void(0)" class="openMenu">Main Menu</a>
                 <ul class="gnbList">
                     <li><a href="html/00_profile/00_profile.html">PROFILE</a></li>
                     <li><a href="html/01_discography/01_discography.html">DISCOGRAPHY</a></li>
-                    <li><a href="">GALLERY</a></li>
-                    <li><a href="">VIDEO</a></li>
-                    <li><a href="">NOTICE</a></li>
-                    <li><a href="">SCHEDULE</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a href="#">VIDEO</a></li>
+                    <li><a href="#">NOTICE</a></li>
+                    <li><a href="#">SCHEDULE</a></li>
                 </ul>
             </div>
         </div>
@@ -86,13 +54,13 @@
             <div class="jyp_logo"><a href="">jyp</a></div>
             <ul class="sns">
                 <li>
-                    <a href="" class="flaticon-youtube-logo"></a>
+                    <a href="#" class="flaticon-youtube-logo"></a>
                 </li>
                 <li>
-                    <a href="" class="flaticon-facebook-app-symbol"></a>
+                    <a href="#" class="flaticon-facebook-app-symbol"></a>
                 </li>
                 <li>
-                    <a href="" class="flaticon-twitter"></a>
+                    <a href="#" class="flaticon-twitter"></a>
                 </li>
             </ul>
         </div>

@@ -1,167 +1,157 @@
 /*footer start*/
 
-    /*footer wrap start*/
-    .footer{
-        height:57px;
-        width:100%;
-        box-sizing:border-box;
-        background-color:rgba(0,0,0,0.5);
-        padding:0 80px;
-        position:fixed; bottom:0; left: 0;
-    }
-    /*footer wrap end*/
+
+/*footer wrap start*/
+
+.footer {
+    height: 57px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0 80px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/*footer wrap end*/
 
 
-    /*jyp logo start */
-    .jyp_logo{
-        width:115px;
-        height:45px;
-        background-repeat:no-repeat;
-        background-image:url(../../lib/img/jyplogo.png);
-        text-indent:-9999px;
-        float:left;
-        margin-top:5px;
-    }
-    /*jyp logo end */
+/*jyp logo start */
+
+.jyp_logo {
+    width: 115px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-image: url(../../lib/img/jyplogo.png);
+    text-indent: -9999px;
+    float: left;
+    margin-top: 5px;
+}
+
+/*jyp logo end */
 
 
-    /*sns wrap start*/
-        .sns li{
-            display:inline-block;
-            float:right;
-            margin-top:13px;
-        }
+/*sns wrap start*/
 
-        .flaticon-twitter{
-            display:block;
-            color:white;
-            width:30px;
-            height:30px;
-            font-size:18px;
-            line-height:28px;
-            color:black;
-            background-color:white;
-            border-radius:3px;
-            text-align:center;
-        }
+.sns li {
+    display: inline-block;
+    float: right;
+    margin-top: 13px;
+}
+.flaticon-twitter {
+    display: block;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 28px;
+    color: black;
+    background-color: white;
+    border-radius: 3px;
+    text-align: center;
+}
+.flaticon-youtube-logo {
+    display: block;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 27px;
+    color: black;
+    background-color: white;
+    border-radius: 3px;
+    text-align: center;
+    margin-left: 10px;
+}
+.flaticon-facebook-app-symbol {
+    display: block;
+    width: 30px;
+    height: 30px;
+    color: white;
+    font-size: 20px;
+    line-height: 28px;
+    color: black;
+    background-color: white;
+    border-radius: 3px;
+    text-align: center;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
 
-        .flaticon-youtube-logo{
-            display:block;
-            color:white;
-            width:30px;
-            height:30px;
-            font-size:20px;
-            line-height:27px;
-            color:black;
-            background-color:white;
-            border-radius:3px;
-            text-align:center;
-            margin-left:10px;
-        }
-
-        .flaticon-facebook-app-symbol {
-            display:block;
-            width:30px;
-            height:30px;
-            color:white;
-            font-size:20px;
-            line-height:28px;
-            color:black;
-            background-color:white;
-            border-radius:3px;
-            text-align:center;
-            margin-left:10px;
-            box-sizing: border-box;
-        }
-        /*sns wrap end*/
+/*sns wrap end*/
 
 
 /*footer end*/
 
-
-
-@media screen and (max-width:768px){
-
+@media screen and (max-width:768px) {
     /*footer wrap start*/
-    .footer{
-        height:37px;
-        width:100%;
-        box-sizing:border-box;
-        background-color:rgba(0,0,0,0.5);
-        padding:0 20px;
-        position:fixed; bottom:0;
+    .footer {
+        height: 37px;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 0 20px;
+        position: fixed;
+        bottom: 0;
     }
     /*footer wrap end*/
-
-
     /*jyp logo start */
-    .jyp_logo{
-        width:115px;
-        height:45px;
-        background-repeat:no-repeat;
-        background-image:url(../../lib/img/jyplogo.png);
-        background-size:60%;
-        text-indent:-9999px;
-        float:left;
-        margin-top:5px;
+    .jyp_logo {
+        width: 115px;
+        height: 45px;
+        background-repeat: no-repeat;
+        background-image: url(../../lib/img/jyplogo.png);
+        background-size: 60%;
+        text-indent: -9999px;
+        float: left;
+        margin-top: 5px;
     }
     /*jyp logo end */
-
-
     /*sns wrap start*/
-    .sns li{
-        display:inline-block;
-        float:right;
-        margin-top:7px;
-
+    .sns li {
+        display: inline-block;
+        float: right;
+        margin-top: 7px;
     }
-
-
-    .flaticon-twitter{
-        display:block;
-        color:white;
-        width:23px;
-        height:23px;
-        font-size:15px;
-        line-height:23px;
-        color:black;
-        background-color:white;
-        border-radius:3px;
-        text-align:center;
-
-
+    .flaticon-twitter {
+        display: block;
+        color: white;
+        width: 23px;
+        height: 23px;
+        font-size: 15px;
+        line-height: 23px;
+        color: black;
+        background-color: white;
+        border-radius: 3px;
+        text-align: center;
     }
-
-
-    .flaticon-youtube-logo{
-        display:block;
-        color:white;
-        width:23px;
-        height:23px;
-        font-size:16px;
-        line-height:22px;
-        color:black;
-        background-color:white;
-        border-radius:3px;
-        text-align:center;
-        margin-left:8px;
+    .flaticon-youtube-logo {
+        display: block;
+        color: white;
+        width: 23px;
+        height: 23px;
+        font-size: 16px;
+        line-height: 22px;
+        color: black;
+        background-color: white;
+        border-radius: 3px;
+        text-align: center;
+        margin-left: 8px;
     }
-
     .flaticon-facebook-app-symbol {
-        display:block;
-        width:23px;
-        height:23px;
-        color:white;
-        font-size:16px;
-        line-height:22px;
-        color:black;
-        background-color:white;
-        border-radius:3px;
-        text-align:center;
-        margin-left:8px;
+        display: block;
+        width: 23px;
+        height: 23px;
+        color: white;
+        font-size: 16px;
+        line-height: 22px;
+        color: black;
+        background-color: white;
+        border-radius: 3px;
+        text-align: center;
+        margin-left: 8px;
         box-sizing: border-box;
     }
     /*sns wrap end*/
-
-
 }

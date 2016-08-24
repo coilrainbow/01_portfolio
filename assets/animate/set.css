@@ -579,7 +579,7 @@ figure.effect-oscar figcaption::before, figure.effect-oscar p {
     -webkit-transform: scale(0);
     transform: scale(0);
     color:#464646;
-    font-weight:bold;
+    /*font-weight:bold;*/
 }
 figure.effect-oscar:hover h2 {
 		opacity:1;
