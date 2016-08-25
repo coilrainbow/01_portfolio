@@ -57,9 +57,9 @@
     <!-- #Slider Starts -->
     <div id="home">
         <!-- Slider Starts -->
-        <div id="myCarousel" class="carousel slide banner-slider animated fadeIn" data-ride="carousel">
+        <div id="myCarousel" class="carousel  banner-slider animated fadeIn" data-ride="carousel">
             <div class="carousel-inner">
-                <div class=" container ">
+                <div class="container">
                     <h2>
                         I Create Cool Things For
                         <span> The Better Web.</span>
@@ -212,7 +212,7 @@
                     </p>
                 </figcaption>
             </figure>
-            <figure class=" mix category_1 effect-oscar  wowload fadeInUp">
+            <!-- <figure class=" mix category_1 effect-oscar  wowload fadeInUp">
                 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/oM1_kZojPi4" frameborder="0" allowfullscreen></iframe>
                 <figcaption>
                     <h2>Music</h2>
@@ -221,7 +221,7 @@
                         <a href="images/portfolio/3.jpg" class="video" title="1" data-gallery="">View more</a>
                     </p>
                 </figcaption>
-            </figure>
+            </figure> -->
         </ul>
 
     </div>
@@ -340,11 +340,24 @@
     <script type="text/javascript" src="assets/jquery.mixitup.min.js"></script>
     <script>
         $(window).resize(function() {
+          var winHeight = $(window).height()
+          $('#home .container').parent().css({
+            marginTop:winHeight/2.5,
+          })
+          if($(window).width() <= 900){
+            $('#home .container').parent().css({
+              marginTop:winHeight/1.8,
+            })
+          }
             $('#home').css({
-                height: $(window).height()
+                height:winHeight
             })
         })
         $(window).trigger('resize')
+        // $(window).load(function(){
+        //   $('body').fadeIn(3000)
+        // })
+
     </script>
 
 </body>
