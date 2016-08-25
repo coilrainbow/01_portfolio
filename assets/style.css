@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 body {
-  /*display:none;*/
+    /*display:none;*/
     color: #333;
     font: 300 15px/15px Roboto, "Nanum Gothic", Arial, Helvetica;
     -webkit-font-smoothing: antialiased;
@@ -126,7 +126,7 @@ p {
 #home h2 {
     font-size: 50px;
     color: #e3e3e3;
-    margin-bottom:0;
+    margin-bottom: 0;
 }
 #home h2 span {
     display: block;
@@ -290,6 +290,32 @@ p {
     text-decoration: none;
     padding: 0 3em;
 }
+#works .videoPlay iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#works .videoPlay a.close {
+    font-size: 50px;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 2;
+}
+#works .videoPlay img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+#works .videoPlay figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
 
 /*works*/
 
@@ -357,7 +383,8 @@ p {
 .footer p.flipInX {
     animation-delay: 600ms;
     height: 100px;
-    margin-bottom: 0.8em;
+    width: 100px;
+    margin: 0 auto 0.8em;
 }
 .footer a {
     color: #aaa;
@@ -442,10 +469,12 @@ p {
         line-height: 1.5em;
     }
     #home {
-      background: url(../images/mcS.jpg) no-repeat center;
-  background-size: 1600px;
+        background: url(../images/mcS.jpg) no-repeat center;
+        background-size: 1600px;
     }
-    #home .container{ padding:0 20px;}
+    #home .container {
+        padding: 0 20px;
+    }
     #home h2 {
         font-size: 35px;
     }
@@ -552,7 +581,7 @@ p {
         padding: 1.5em;
     }
     .footer {
-        margin-top: 2em;
+        /*margin-top: 2em;*/
         padding-bottom: 2em;
     }
 }

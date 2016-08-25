@@ -13,6 +13,7 @@
     <!-- font awesome -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+
     <!-- bootstrap -->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 
@@ -23,7 +24,10 @@
     <!-- gallery -->
     <link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
 
+    <!-- default css -->
     <link rel="stylesheet" href="assets/style.css">
+
+
 </head>
 
 <body>
@@ -212,16 +216,19 @@
                     </p>
                 </figcaption>
             </figure>
-            <!-- <figure class=" mix category_1 effect-oscar  wowload fadeInUp">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/oM1_kZojPi4" frameborder="0" allowfullscreen></iframe>
+            <figure class="videoPlay mix category_1 effect-oscar  wowload fadeInUp">
+                <a href="javascript:void(0)" class="close">x</a>
+                <img src="images/portfolio/happyCrash.jpg" alt="">
+                <!-- creating iframe  -->
+                <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/oM1_kZojPi4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
                 <figcaption>
-                    <h2>Music</h2>
-                    <p>#인디밴드 #해피가좋다 #짝사랑 #뮤직비디오 #bassist #서진석 #취미 #발연기
+                    <h2>해피가좋다 - 짝사랑</h2>
+                    <p>#인디밴드 #해피가좋다 #짝사랑 #뮤직비디오 #bassist #서진석
                         <br>
-                        <a href="images/portfolio/3.jpg" class="video" title="1" data-gallery="">View more</a>
+                        <a href="javascript:void(0)" class="captionOff">PLAY THE M/V</a>
                     </p>
                 </figcaption>
-            </figure> -->
+            </figure>
         </ul>
 
     </div>
@@ -310,6 +317,8 @@
         <a class="next">›</a> -->
         <a class="close">×</a>
         <!-- The modal dialog, which will be used to wrap the lightbox content -->
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
     </div>
 
 
@@ -338,26 +347,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/jquery.mixitup.min.js"></script>
-    <script>
-        $(window).resize(function() {
-            var winHeight = $(window).height()
-            $('#home .container').parent().css({
-                marginTop: winHeight / 2,
-            })
-            if ($(window).width() <= 900) {
-                $('#home .container').parent().css({
-                    marginTop: winHeight / 2.1,
-                })
-            }
-            $('#home').css({
-                height: winHeight
-            })
-        })
-        $(window).trigger('resize')
-            // $(window).load(function(){
-            //   $('body').fadeIn(3000)
-            // })
-    </script>
+
+
+
+
+
+    <!-- customJs -->
+    <script src="assets/customJs.js"></script>
 
 </body>
 

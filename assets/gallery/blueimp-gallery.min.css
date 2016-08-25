@@ -27,6 +27,8 @@
     -ms-touch-action: none;
     touch-action: none
 }
+
+
 .blueimp-gallery-carousel {
     position: relative;
     z-index: auto;
@@ -311,4 +313,16 @@ body:last-child .blueimp-gallery>.slides>.slide>.video-content:not(.video-loadin
 *+html .blueimp-gallery>.slides>.slide>.video-content>a {
     left: 50%;
     margin-left: -64px
+}
+
+
+.blueimp-gallery > .description {
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  color: #fff;
+  display: none;
+}
+.blueimp-gallery-controls > .description {
+  display: block;
 }
