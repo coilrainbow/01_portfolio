@@ -340,24 +340,23 @@
     <script type="text/javascript" src="assets/jquery.mixitup.min.js"></script>
     <script>
         $(window).resize(function() {
-          var winHeight = $(window).height()
-          $('#home .container').parent().css({
-            marginTop:winHeight/2.5,
-          })
-          if($(window).width() <= 900){
+            var winHeight = $(window).height()
             $('#home .container').parent().css({
-              marginTop:winHeight/1.8,
+                marginTop: winHeight / 2,
             })
-          }
+            if ($(window).width() <= 900) {
+                $('#home .container').parent().css({
+                    marginTop: winHeight / 2.1,
+                })
+            }
             $('#home').css({
-                height:winHeight
+                height: winHeight
             })
         })
         $(window).trigger('resize')
-        // $(window).load(function(){
-        //   $('body').fadeIn(3000)
-        // })
-
+            // $(window).load(function(){
+            //   $('body').fadeIn(3000)
+            // })
     </script>
 
 </body>

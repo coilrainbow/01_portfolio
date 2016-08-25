@@ -9,6 +9,7 @@
                  $('.gnbList').css({
                      display: 'block'
                  })
+
              } else if ($('body').width() < 767) {
                  $('.nav >a:first').css({
                      display: 'block'
@@ -16,7 +17,7 @@
                  $('.nav .gnbList').css({
                      display: 'none'
                  });
-                 $('.changeText').text('Main Menu')
+                 $('.openMenu').text('Main Menu')
              }
 
          })
