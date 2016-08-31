@@ -197,7 +197,7 @@
     /*nav end*/
     /*content start*/
     .section .albumInfo img {
-        max-width: 350px;
+        width: 350px;
     }
     .section .albumStory {
         float: left;
