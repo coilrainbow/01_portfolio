@@ -1,0 +1,32 @@
+/*버튼,인풋 그룹*/
+button,input{font-family: 'YouandiModernTR', dotum, '돋움', gulim, '굴림', Arial, sans-serif, helvetica}
+
+.btn-login {
+    border: 1px #373737 solid;
+    padding:3px 7px 4px;
+    font-size: 11px;
+    color: #999;
+    background: none;
+    cursor:pointer
+}
+.btn-search-open{
+    width:24px;
+    height:24px;
+    border: none;
+    background: none;
+    text-indent:-9999px;
+    cursor:pointer;
+    background:url(../images/sp_btn_icon.png) -180px -24px;
+}
+/*//버튼,인풋 그룹*/
+
+
+/*레이아웃*/
+.l-container{margin:0 auto}
+.l-sectionWidth{width: 1180px;}
+@media only screen and (min-width:1500px) {
+    .l-sectionWidth {
+        width: 1384px;
+    }
+}
+/*//레이아웃*/

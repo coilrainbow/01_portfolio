@@ -1,58 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="lib/css/footer.css" type="text/css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hyundai Card</title>
+    <style>
+        @font-face {
+            font-family: 'YouandiModernTR';
+            font-style: normal;
+            font-weight: normal;
+            src: url(libs/font/Youandi_Modern_TextRegular.eot);
+            src: url(libs/font/Youandi_Modern_TextRegular.eot?#iefix) format('embedded-opentype'), url(libs/font/Youandi_Modern_TextRegular.woff) format('woff')
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'YouandiModernTR', dotum, '돋움', gulim, '굴림', Arial, sans-serif, helvetica;
+            background: #000;
+        }
+
+        .content {
+            margin-top: 8%;
+            text-align: center;
+            color: #fff;
+        }
+
+        .title-txt {
+            font-weight: normal;
+            font-size: 1.5em;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle-txt {
+            font-weight: normal;
+            font-size: 3em;
+            letter-spacing: -2px;
+            margin: 20px 0;
+        }
+
+        .explain-txt {
+            font-size: 1em;
+            line-height: 1.5em;
+        }
+
+        .btn_go {
+            display: block;
+            margin: 0 auto;
+            padding: 10px;
+            background: none;
+            outline: none;
+            border: 1px #fff solid;
+            font-family: inherit;
+            font-size: 1em;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #countdown {
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            left: 50%;
+            top: 48%;
+            margin-left: -100px;
+            margin-top: -50px;
+            color: white;
+            font-size: 5em;
+            text-align: center;
+            font-weight: bold;
+            /*font-style: italic;*/
+            -webkit-opacity: 1;
+            -moz-opacity: 1;
+            opacity: 1;
+            -webkit-transition: opacity 0.4s ease;
+            -moz-transition: opacity 0.4s ease;
+            -ms-transition: opacity 0.4s ease;
+            -o-transition: opacity 0.4s ease;
+            /* solve for flicker problem */
+            -webkit-perspective: 1000;
+            -webkit-backface-visibility: hidden;
+        }
+
+        #countdown.puffer {
+            -webkit-opacity: 0;
+            -moz-opacity: 0;
+            opacity: 0;
+            -webkit-transform: scale(1.6, 1.6);
+            -moz-transform: scale(1.6, 1.6);
+            -ms-transform: scale(1.6, 1.6);
+            -o-transform: scale(1.6, 1.6);
+            -webkit-transition: all 0.4s ease-out;
+            -moz-transition: all 0.4s ease-out;
+            -ms-transition: all 0.4s ease-out;
+            -o-transition: all 0.4s ease-out;
+        }
+
+        @media screen and (max-width:400px) {
+            .wrap {
+                padding: 0 3%;
+            }
+            .title-txt {
+                font-size: 1em;
+            }
+            .subtitle-txt {
+                font-size: 2em;
+            }
+            .explain-txt {
+                font-size: 1em;
+                line-height: 1.4em;
+            }
+            #countdown{
+                font-size: 6em;
+                top:50%;}
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        var startNum;
+        var currentNum;
+
+        function addClassDelayed(jqObj, c, to) {
+            setTimeout(function() {
+                jqObj.addClass(c);
+            }, to);
+        }
+
+        function anim() {
+            addClassDelayed($("#countdown"), "puffer", 600);
+            if (currentNum == -1) currentNum = startNum - 1;
+            else currentNum--;
+            if (currentNum == -1) {
+
+                $('.btn_go').click()
+            }
+            $('#countdown').text(currentNum + 1);
+            $('#countdown').removeClass("puffer");
+        }
+
+
+
+        $(function() {
+            startNum = 5;
+            currentNum = startNum;
+            $("#countdown").text(currentNum); // init first time based on n
+            self.setInterval(function() {
+                anim()
+            }, 1325);
+
+        });
+    </script>
 </head>
+
 <body>
     <div class="wrap">
-        <header id="header">
-            <div class="gnbTop_wrap">
-                <div class="gnbTop_content">
-                    <ul>
-                        <li><button type="button" class="btnLogin">로그인</button></li>
-                        <li><a href="">회원가입</a></li>
-                        <li><a href="">개인</a></li>
-                        <li><a href="">개인사업자</a></li>
-                        <li><a href="">법인</a></li>
-                        <li><a href="">가맹점</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="gnbMain_wrap">
-                <h1 class="logo">
-                    <a href=""><img src="" alt="현대카드로고" />현대카드</a>
-                </h1>
-                <nav class="gnbMain_content">
-                    <ul>
-                        <li><a href="">My Account</a></li>
-                        <li><a href="">카드 안내&middot;신청</a></li>
-                        <li><a href="">나만의 혜택</a></li>
-                        <li><a href="">X혜택 안내</a></li>
-                        <li><a href="">금융 안내&middot;신청</a></li>
-                        <li><a href="">컬처&middot;라이프스타일</a></li>
-                        <li><a href="">고객센터</a></li>
-                    </ul>
-                    <div class="sectionSearch_wrap">
-                        <button class="btnSearch">검색창열기</button>
-                        <div class="sectionSearch_content_Wrap">
-
-                                <div class="searchWrap">
-                                    <label for=""><input type="search" placeholder="검색어를 입력하세요" /></label>
-                                </div>
-
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
-        <section></section>
-        <footer></footer>
+        <div class="content">
+            <h1 class="title-txt">portfolio</h1>
+            <h2 class="subtitle-txt">Hyundai Card</h2>
+            <p class="explain-txt">본작업물은 개인작업물이며 해당 기업과는 무관합니다.
+                <br /> 5초 후에 페이지로 이동합니다.</p>
+        </div>
+        <button type="button" class="btn_go" onclick='location.href="//coilrainbow.cafe24.com/portfolio/hyundaiCard/html/main.html"'>바로가기</button>
+        <div id="countdown"></div>
     </div>
 </body>
+
 </html>

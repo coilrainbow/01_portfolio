@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'YouandiModernTR';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../font/Youandi_Modern_TextRegular.eot);
+    src: url(../font/Youandi_Modern_TextRegular.eot?#iefix) format('embedded-opentype'), url(../font/Youandi_Modern_TextRegular.woff) format('woff')
+}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body{font-family:'YouandiModernTR',dotum,'돋움',gulim,'굴림',Arial,sans-serif,helvetica;width:100%;height:100%}
+ul,ol{list-style:none;font-size:0;}
+img,fieldset{border:0}
+a{text-decoration:none;color:#000}

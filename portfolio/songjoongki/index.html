@@ -1,93 +1,166 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>:: Song Joong Ki ::</title>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu:700" rel="stylesheet">
-    <link href="lib/css/bootstrap.min.css" rel="stylesheet">
-    <link href="lib/css/style.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="lib/js/bootstrap.min.js"></script>
-    <script src="lib/js/common.js"></script>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family:'Ubuntu', sans-serif;
+            background: #000;
+        }
+
+        .content {
+            margin-top: 8%;
+            text-align: center;
+            color: #fff;
+        }
+
+        .title-txt {
+            font-weight: normal;
+            font-size: 1.5em;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle-txt {
+            font-weight: normal;
+            font-size: 3em;
+            letter-spacing: -2px;
+            margin: 20px 0;
+        }
+
+        .explain-txt {
+            font-size: 1em;
+            line-height: 1.5em;
+        }
+
+        .btn_go {
+            display: block;
+            margin: 0 auto;
+            padding: 10px;
+            background: none;
+            outline: none;
+            border: 1px #fff solid;
+            font-family: inherit;
+            font-size: 1em;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #countdown {
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            left: 50%;
+            top: 48%;
+            margin-left: -100px;
+            margin-top: -50px;
+            color: white;
+            font-size: 5em;
+            text-align: center;
+            font-weight: bold;
+            /*font-style: italic;*/
+            -webkit-opacity: 1;
+            -moz-opacity: 1;
+            opacity: 1;
+            -webkit-transition: opacity 0.4s ease;
+            -moz-transition: opacity 0.4s ease;
+            -ms-transition: opacity 0.4s ease;
+            -o-transition: opacity 0.4s ease;
+            /* solve for flicker problem */
+            -webkit-perspective: 1000;
+            -webkit-backface-visibility: hidden;
+        }
+
+        #countdown.puffer {
+            -webkit-opacity: 0;
+            -moz-opacity: 0;
+            opacity: 0;
+            -webkit-transform: scale(1.6, 1.6);
+            -moz-transform: scale(1.6, 1.6);
+            -ms-transform: scale(1.6, 1.6);
+            -o-transform: scale(1.6, 1.6);
+            -webkit-transition: all 0.4s ease-out;
+            -moz-transition: all 0.4s ease-out;
+            -ms-transition: all 0.4s ease-out;
+            -o-transition: all 0.4s ease-out;
+        }
+
+        @media screen and (max-width:400px) {
+            .wrap {
+                padding: 0 3%;
+            }
+            .title-txt {
+                font-size: 1em;
+            }
+            .subtitle-txt {
+                font-size: 2em;
+            }
+            .explain-txt {
+                font-size: 1em;
+                line-height: 1.4em;
+            }
+            #countdown{
+                font-size: 6em;
+                top:50%;}
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        var startNum;
+        var currentNum;
+
+        function addClassDelayed(jqObj, c, to) {
+            setTimeout(function() {
+                jqObj.addClass(c);
+            }, to);
+        }
+
+        function anim() {
+            addClassDelayed($("#countdown"), "puffer", 600);
+            if (currentNum == -1) currentNum = startNum - 1;
+            else currentNum--;
+            if (currentNum == -1) {
+
+                $('.btn_go').click()
+            }
+            $('#countdown').text(currentNum + 1);
+            $('#countdown').removeClass("puffer");
+        }
+
+
+
+        $(function() {
+            startNum = 5;
+            currentNum = startNum;
+            $("#countdown").text(currentNum); // init first time based on n
+            self.setInterval(function() {
+                anim()
+            }, 1325);
+
+        });
+    </script>
 </head>
 
 <body>
-    <div class="wrapper container">
-        <header>
-            <nav class="navbar navbar-default">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#"></a>
-                    <a class="logo_blossom" href="#"></a>
-                    <button type="button" class="navbar-toggle collapsed">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-
-                <div class="collspan navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right text-uppercase">
-                        <li><a href="#">biography</a></li>
-                        <li><a href="#">filmography</a></li>
-                        <li>
-                            <a href="#">star media</a>
-                            <ul>
-                                <li><a href="#">movie</a></li>
-                                <li><a href="#">drama</a></li>
-                                <li><a href="#">others</a></li>
-                                <li><a href="#">star zone</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">schedule</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-
-        <main class="song">
-            <div class="title">
-                <h3 class="text-right">SONG JOONG KI</h3>
-            </div>
-            <span class="subtitle text-uppercase">biography</span>
-            <div class="information">
-                <strong class="text-capitalize">송중기<span>song joong ki</span></strong>
-                <dl>
-                    <dt>생년월일</dt>
-                    <dd>1985년 9월 19일</dd>
-                    <dt>신체사이즈</dt>
-                    <dd>178cm, 65kg</dd>
-                    <dt>혈액형</dt>
-                    <dd>A형</dd>
-                    <dt>데뷔</dt>
-                    <dd>2008년 영화 [쌍화점]</dd>
-                    <dt>학력</dt>
-                    <dd>성균관대학교 경영학</dd>
-                </dl>
-            </div>
-        </main>
-    </div>
-
-
-
-    <div class="footer">
-        <address>
-        <div class="pull-left text-left">
-          <span>6F, UNO B/D, 112-18, NONHYEON-DONG, GANGNAM-GU, SEOUL, KOREA</span>
-          <span>TEL. +82-2-558-5320</span>
+    <div class="wrap">
+        <div class="content">
+            <h1 class="title-txt">portfolio</h1>
+            <h2 class="subtitle-txt">:: Song Joong Ki ::</h2>
+            <p class="explain-txt">본작업물은 개인작업물이며 해당 기업과는 무관합니다.
+                <br /> 5초 후에 페이지로 이동합니다.</p>
         </div>
-        <div class="pull-right text-right">
-          <span>COPYRIGHT BLOSSOM CORP. ALL RIGHT RESERVED</span>
-          <span>DESIGN BY SWEATER INTERACTIVE</span>
-        </div>
-
-      </address>
-
+        <button type="button" class="btn_go" onclick='location.href="//coilrainbow.cafe24.com/portfolio/songjoongki/main.html"'>바로가기</button>
+        <div id="countdown"></div>
     </div>
-
 </body>
 
 </html>
