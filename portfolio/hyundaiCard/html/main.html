@@ -16,7 +16,7 @@
 <body>
     <header id="header">
         <div class="l-gnbTop-wrap">
-            <div class="l-gnbTop-content l-sectionWidth l-container">
+            <div class="l-gnbTop-content l-section-width l-container">
                 <ul>
                     <li>
                         <button type="button" class="btn-login">로그인</button>
@@ -31,12 +31,12 @@
         </div>
 
         <div class="l-gnbMain-wrap">
-            <div class="l-gnbMain-content l-sectionWidth l-container">
+            <div class="l-gnbMain-content l-section-width l-container">
                 <h1 class="logo">
                     <a href=""><img src="../libs/images/logo_header.png" alt="현대카드로고" /></a>
                 </h1>
-                <nav>
-                    <ul class="l-gnbMain-menu">
+                <nav class="l-gnbMain-menu">
+                    <ul>
                         <li><a href="">My Account</a></li>
                         <li><a href="">카드 안내&middot;신청</a></li>
                         <li><a href="">나만의 혜택</a></li>
@@ -49,19 +49,54 @@
                     <div class="l-search-wrap">
                         <button class="btn-search-open">검색창열기</button>
                         <div class="l-search-content">
-                            <div class="l-input-wrap">
+                            <div class="l-input-wrap l-section-width l-container">
                                 <label for="">
-                                    <input type="search" placeholder="검색어를 입력하세요" />
+                                    <span class="input-txt">검색어를 입력하세요</span>
+                                    <input type="search" class="input-search" value maxlength="78" autocomplete="off" />
                                 </label>
+                                <button class="btn-search-open">검색창열기</button>
                             </div>
-
+                            <div class="keyword-wrap">
+                                <dl class="serch-keyword l-section-width l-container">
+                                    <dt class="popular-word">인기검색어</dt>
+                                    <dd><a href="javascript:void(0)">할부전환</a></dd>
+                                    <dd><a href="javascript:void(0)">M포인트</a></dd>
+                                    <dd><a href="javascript:void(0)">가족카드</a></dd>
+                                    <dd><a href="javascript:void(0)">영수증</a></dd>
+                                    <dd><a href="javascript:void(0)">리볼빙</a></dd>
+                                    <dd><a href="javascript:void(0)">분실</a></dd>
+                                    <dd><a href="javascript:void(0)">이용한도</a></dd>
+                                    <dd><a href="javascript:void(0)">공인인증서</a></dd>
+                                    <dd><a href="javascript:void(0)">payshot</a></dd>
+                                    <dd><a href="javascript:void(0)">sms문자서비스</a></dd>
+                                </dl>
+                            </div>
                         </div>
                     </div>
                 </nav>
             </div>
         </div>
     </header>
-    <section></section>
+    <section id="mainPage">
+        <div class="l-mainPage-wrap l-section-width l-container">
+            <div class="l-notice-content">
+                <p class="notice">
+                    <a href="#" class="notice-txt">현대카드 PRIVIA 쇼핑 제휴 서비스 종료 및 신규 제휴처 안내</a>
+                </p>
+                <div class="l-todayClose_wrap">
+                    <label for="chkbox-todayClose">
+                        <input type="checkbox" id="chkbox-todayClose" />오늘 하루 열지 않기
+                    </label>
+                    <button type- "button" class="btn-close05">닫기</button>
+                </div>
+            </div>
+            <div class="l-mainPage-content">
+                <div class="l-contentBox01"></div>
+                <div class="l-contentBox02"></div>
+
+            </div>
+        </div>
+    </section>
     <footer></footer>
 
 </body>

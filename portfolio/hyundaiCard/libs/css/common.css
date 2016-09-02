@@ -7,25 +7,30 @@ button,input{font-family: 'YouandiModernTR', dotum, '돋움', gulim, '굴림', A
     font-size: 11px;
     color: #999;
     background: none;
-    cursor:pointer
+    cursor:pointer;
+    text-indent:0;
 }
 .btn-search-open{
     width:24px;
     height:24px;
     border: none;
-    background: none;
     text-indent:-9999px;
     cursor:pointer;
-    background:url(../images/sp_btn_icon.png) -180px -24px;
+    background:url(../images/sp_btn_icon.png) -180px -25px;
 }
+.input-txt{color:#83baeb; font-size:21px; position:absolute; padding:16px 0;}
+.input-search{border:none;outline:none;width:100%;height:32px;font-size:21px;text-decoration:none;text-rendering:none;}
+
+input[type="checkbox"]{width:0;height:0;margin:0;padding:0;text-indent:-9999px;}
+button{margin:0;padding:0;border:0 none;background:none;text-indent:-9999px;font-size:0;}
 /*//버튼,인풋 그룹*/
 
 
 /*레이아웃*/
 .l-container{margin:0 auto}
-.l-sectionWidth{width: 1180px;}
+.l-section-width{width: 1180px;}
 @media only screen and (min-width:1500px) {
-    .l-sectionWidth {
+    .l-section-width {
         width: 1384px;
     }
 }
